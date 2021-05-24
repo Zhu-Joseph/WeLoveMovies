@@ -4,6 +4,5 @@ const methodNotAllowed = require("../errors/methodNotAllowed")
 const cors = require("cors")
 const corsGet = cors({methods: "GET"})
 
-router.route("/theaters").get(controller.list).all(methodNotAllowed)
-// router.route("/").get(controller.list).all(methodNotAllowed)
+router.route("/").get(controller.list).all(methodNotAllowed)
 module.exports = router

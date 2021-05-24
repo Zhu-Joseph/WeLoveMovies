@@ -3,6 +3,8 @@ exports.up = function (knex) {
       table.increments("review_id").primary();
       table.text("content");
       table.integer("score");
+      table.integer("movie_id")
+      table.integer("critic_id")
       table.foreign("critic_id").references("critic_id").inTable("critics")
       table.foreign("movie_id").references("movie_id").inTable("movies")
     });
